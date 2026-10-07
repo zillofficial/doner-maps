@@ -1,0 +1,339 @@
+[
+  {
+    "id": "wrap",
+    "name": "شاورما عادي",
+    "category": "shawarma",
+    "price": 140,
+    "description": "80 غرام · Dürüm Döner",
+    "image": "photos/wrap.jpg",
+    "cheese": 50
+  },
+  {
+    "id": "double",
+    "name": "شاورما دبل",
+    "category": "shawarma",
+    "price": 200,
+    "description": "120 غرام · Dürüm Döner Double Dolgu",
+    "image": "photos/wrap.jpg",
+    "cheese": 50,
+    "imageNote": "الصورة لنفس نوع الوجبة؛ الكمية حسب الحجم المختار."
+  },
+  {
+    "id": "supernova",
+    "name": "شاورما سوبرنوفا",
+    "category": "shawarma",
+    "price": 230,
+    "description": "140 غرام · Dürüm Döner Supernova",
+    "image": "photos/wrap.jpg",
+    "cheese": 75,
+    "imageNote": "الصورة لنفس نوع الوجبة؛ الكمية حسب الحجم المختار."
+  },
+  {
+    "id": "gourmet",
+    "name": "شاورما بخبز صمون",
+    "category": "shawarma",
+    "price": 190,
+    "description": "110 غرام · Gurme Ekmeği Döner",
+    "cheese": 50
+  },
+  {
+    "id": "finger",
+    "name": "إصبع شاورما",
+    "category": "shawarma",
+    "price": 90,
+    "description": "55 غرام · Döner Parmak"
+  },
+  {
+    "id": "potato-wrap",
+    "name": "سندويش بطاطس بخبز سياحي",
+    "category": "shawarma",
+    "price": 140,
+    "description": "Lavaş Patates Dürüm"
+  },
+  {
+    "id": "potato-bun",
+    "name": "سندويش بطاطس بخبز صمون",
+    "category": "shawarma",
+    "price": 160,
+    "description": "Gurme Ekmeği Patates"
+  },
+  {
+    "id": "portion",
+    "name": "وجبة شاورما شرائح",
+    "category": "portions",
+    "price": 300,
+    "description": "180 غرام · Porsiyon Döner",
+    "image": "photos/portion.jpg"
+  },
+  {
+    "id": "portion-super",
+    "name": "وجبة شاورما شرائح سوبر",
+    "category": "portions",
+    "price": 380,
+    "description": "240 غرام · Porsiyon Döner Süper",
+    "image": "photos/portion.jpg",
+    "imageNote": "الصورة لنفس نوع الوجبة؛ الكمية حسب الحجم المختار."
+  },
+  {
+    "id": "half-kilo",
+    "name": "نصف كيلو شاورما",
+    "category": "portions",
+    "price": 600,
+    "description": "500 غرام · Yarım Kilo Döner",
+    "image": "photos/half-kilo.jpg"
+  },
+  {
+    "id": "rice-doner",
+    "name": "شاورما مع رز",
+    "category": "portions",
+    "price": 220,
+    "description": "أرز أبيض مع 80 غرام من شرائح الشاورما، يُقدّم مع عيران ومخلل · Pilav Üstü Döner",
+    "image": "photos/rice-doner.jpg"
+  },
+  {
+    "id": "rice",
+    "name": "رز أبيض سادة",
+    "category": "portions",
+    "price": 110,
+    "description": "Sade Pilav"
+  },
+  {
+    "id": "arabic",
+    "name": "شاورما عربي عادي",
+    "category": "arabic",
+    "price": 250,
+    "description": "110 غرام · 6 قطع شاورما عربي · Arap Döner",
+    "cheese": 50,
+    "image": "photos/arabic.jpg",
+    "cheeseImage": "photos/arabic-cheese.jpg"
+  },
+  {
+    "id": "arabic-super",
+    "name": "شاورما عربي سوبر",
+    "category": "arabic",
+    "price": 335,
+    "description": "165 غرام · 9 قطع شاورما عربي · Süper Arap Döner",
+    "cheese": 75,
+    "image": "photos/arabic.jpg",
+    "cheeseImage": "photos/arabic-cheese.jpg",
+    "imageNote": "الصورة لنفس نوع الوجبة؛ الكمية حسب الحجم المختار."
+  },
+  {
+    "id": "arabic-double",
+    "name": "شاورما عربي دبل",
+    "category": "arabic",
+    "price": 390,
+    "description": "220 غرام · 12 قطعة شاورما عربي · Double Arap Döner",
+    "cheese": 100,
+    "image": "photos/arabic.jpg",
+    "cheeseImage": "photos/arabic-cheese.jpg",
+    "imageNote": "الصورة لنفس نوع الوجبة؛ الكمية حسب الحجم المختار."
+  },
+  {
+    "id": "arabic-bun",
+    "name": "شاورما عربي بخبز صمون",
+    "category": "arabic",
+    "price": 280,
+    "description": "120 غرام · Gurme Ekmeği Döner",
+    "cheese": 50,
+    "image": "photos/arabic-bun.jpg"
+  },
+  {
+    "id": "bohca",
+    "name": "صُرّة شاورما",
+    "category": "special",
+    "price": 400,
+    "description": "125 غرام · Bohça Döner Menü. شاورما في خبز لافاش مع الفطر، صوص الثوم، كولسلو، شيدر وقشقوان، وتُقدّم مع كولا.",
+    "image": "photos/round-meal.jpg"
+  },
+  {
+    "id": "maria",
+    "name": "ماريا إكسترا",
+    "category": "special",
+    "price": 375,
+    "description": "150 غرام · Maria Extra Menüsü. شاورما بين طبقتي خبز لافاش، قشقوان وصوص فطر، مع مقبلات وبطاطس وصوصات."
+  },
+  {
+    "id": "zinger-meal",
+    "name": "وجبة زنجر حار",
+    "category": "crispy",
+    "price": 320,
+    "description": "Zincer Menü (Acılı)"
+  },
+  {
+    "id": "zinger-sandwich",
+    "name": "سندويش زنجر",
+    "category": "crispy",
+    "price": 220,
+    "description": "Zincer Sandviç"
+  },
+  {
+    "id": "crispy",
+    "name": "وجبة كرسبي",
+    "category": "crispy",
+    "price": 300,
+    "description": "Çıtır Tavuk Menü"
+  },
+  {
+    "id": "crispy-sandwich",
+    "name": "سندويش كرسبي",
+    "category": "crispy",
+    "price": 200,
+    "description": "Çıtır Tavuk Sandviç"
+  },
+  {
+    "id": "fries",
+    "name": "طبق بطاطس",
+    "category": "potatoes",
+    "price": 150,
+    "description": "بطاطس متبّلة · Baharatlı Patates",
+    "image": "photos/fries.jpg"
+  },
+  {
+    "id": "bbq-fries",
+    "name": "بطاطس بنكهة الباربكيو",
+    "category": "potatoes",
+    "price": 175,
+    "description": "Barbekülü Patates"
+  },
+  {
+    "id": "cheddar-fries",
+    "name": "بطاطس بجبنة شيدر",
+    "category": "potatoes",
+    "price": 200,
+    "description": "Cheddarlı Patates"
+  },
+  {
+    "id": "spicy-fries",
+    "name": "بطاطس حارة مميزة",
+    "category": "potatoes",
+    "price": 175,
+    "description": "Spesiyal Acılı Patates"
+  },
+  {
+    "id": "combo",
+    "name": "كومبو",
+    "category": "potatoes",
+    "price": 220,
+    "description": "بطاطس + 2 إصبع جبنة + 3 حلقات بصل · Combo"
+  },
+  {
+    "id": "potato-pack",
+    "name": "كيس بطاطس",
+    "category": "extras",
+    "price": 60,
+    "description": "Patates Paketi"
+  },
+  {
+    "id": "cheese-sticks",
+    "name": "أصابع جبنة",
+    "category": "extras",
+    "price": 100,
+    "description": "6 قطع · Peynir Çubukları"
+  },
+  {
+    "id": "onion-rings",
+    "name": "حلقات بصل",
+    "category": "extras",
+    "price": 50,
+    "description": "6 قطع · Soğan Halkası"
+  },
+  {
+    "id": "mixed-box",
+    "name": "علبة مشكلة",
+    "category": "extras",
+    "price": 100,
+    "description": "3 أصابع جبنة + 3 حلقات بصل · Karışık Kutu"
+  },
+  {
+    "id": "muhamara",
+    "name": "محمرة بالقشقوان",
+    "category": "extras",
+    "price": 150,
+    "description": "Kaşarlı Muhamara"
+  },
+  {
+    "id": "mozzarella",
+    "name": "إضافة جبنة موزاريلا",
+    "category": "extras",
+    "price": 50,
+    "description": "Mozzarella İlavesi · اكتب في الملاحظات الصنف المطلوب إضافة الجبنة له."
+  },
+  {
+    "id": "coleslaw",
+    "name": "سلطة كول سلو",
+    "category": "sauces",
+    "price": 30,
+    "description": "Coleslaw salatası"
+  },
+  {
+    "id": "garlic",
+    "name": "صوص الثوم",
+    "category": "sauces",
+    "price": 30,
+    "description": "80 غرام · Sarımsak"
+  },
+  {
+    "id": "cocktail",
+    "name": "صوص كوكتيل",
+    "category": "sauces",
+    "price": 30,
+    "description": "80 غرام · Kokteyl"
+  },
+  {
+    "id": "hot",
+    "name": "صوص حار",
+    "category": "sauces",
+    "price": 30,
+    "description": "80 غرام · Acılı"
+  },
+  {
+    "id": "cheddar",
+    "name": "صوص جبنة شيدر",
+    "category": "sauces",
+    "price": 85,
+    "description": "80 غرام · Cheddar"
+  },
+  {
+    "id": "cola",
+    "name": "كولا",
+    "category": "drinks",
+    "price": 50,
+    "description": "310 مل · Kola"
+  },
+  {
+    "id": "fanta",
+    "name": "فانتا",
+    "category": "drinks",
+    "price": 50,
+    "description": "310 مل · Fanta"
+  },
+  {
+    "id": "gazoz",
+    "name": "غازوز",
+    "category": "drinks",
+    "price": 50,
+    "description": "310 مل · Gazoz"
+  },
+  {
+    "id": "juice",
+    "name": "عصير فواكه",
+    "category": "drinks",
+    "price": 40,
+    "description": "250 مل · Meyve Suyu"
+  },
+  {
+    "id": "ayran",
+    "name": "لبن عيران",
+    "category": "drinks",
+    "price": 40,
+    "description": "270 مل · Ayran"
+  },
+  {
+    "id": "water",
+    "name": "ماء",
+    "category": "drinks",
+    "price": 20,
+    "description": "500 مل · Su"
+  }
+]

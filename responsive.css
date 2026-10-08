@@ -143,8 +143,8 @@ header nav a:last-child{display:inline-flex}
 .wheel-navigation{position:relative;padding:0 44px}
 .wheel-navigation .wheel-controls{position:static;margin:0;display:block}
 .wheel-controls button{position:absolute;top:34px;z-index:2;background:#222}
-#wheel-prev{right:0;transform:rotate(90deg)}
-#wheel-next{left:0;transform:rotate(90deg)}
+#wheel-prev{left:0;right:auto;transform:rotate(-90deg)}
+#wheel-next{right:0;left:auto;transform:rotate(-90deg)}
 .wheel-controls span{position:absolute;top:128px;left:0;width:100%;text-align:center;pointer-events:none}
 .wheel-controls span:after{content:'استخدم الأسهم أو اسحب لاختيار قسمك';font-size:12px}
 .menu .filters,.menu .filters button{touch-action:pinch-zoom}
@@ -153,3 +153,5 @@ header nav a:last-child{display:inline-flex}
 .bottom-flames.flames-tiled{height:122px;aspect-ratio:auto;mask-image:none;-webkit-mask-image:none}
 .bottom-flames.flames-tiled canvas{display:block;position:absolute;bottom:0;left:0;width:480px;height:122px;max-width:none;mask-image:none;-webkit-mask-image:none}
 .bottom-flames.flames-tiled canvas:nth-child(even){transform:scaleX(-1)}
+
+@media(max-width:1100px),(any-pointer:coarse){.wheel-navigation,.wheel-navigation *{touch-action:pinch-zoom;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}.wheel-navigation{cursor:grab}.wheel-navigation:active{cursor:grabbing}}

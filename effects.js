@@ -3,6 +3,7 @@
 (() => {
 const reduced=matchMedia('(prefers-reduced-motion: reduce)'), compact=matchMedia('(max-width: 1100px), (any-pointer: coarse)');
 const wheel=document.querySelector('.filters'), buttons=[...wheel.querySelectorAll('[data-category]')], mobile=document.querySelector('#mobile-category');
+const swipeSurface=wheel.closest('.wheel-navigation')||wheel;
 let position=0,target=0,frame=0,last=0,drag=null,moved=false,wheelTimer,dragFrame=0,suppressClickUntil=0;
 mobile.innerHTML=buttons.map(b=>`<option value="${b.dataset.category}">${b.textContent}</option>`).join('');
 function layout(){if(compact.matches){buttons.forEach((b,i)=>{const d=i-position;b.style.transform=`translate(calc(-50% - ${d*190}px),${Math.min(65,d*d*13)}px) rotate(${-Math.max(-18,Math.min(18,d*9))}deg)`;b.style.opacity=Math.max(.15,1-Math.abs(d)*.45);b.style.filter='none';});return}buttons.forEach((b,i)=>{const d=i-position,angle=Math.max(-Math.PI/2,Math.min(Math.PI/2,d*.12)),R=58/.12;b.style.transform=`translate(${R*(1-Math.cos(angle))*.7}px,calc(${R*Math.sin(angle)}px - 50%)) rotate(${-angle*180/Math.PI}deg)`;b.style.opacity=Math.max(.3,1-Math.abs(d)*.15);b.style.filter=`blur(${Math.min(1,Math.abs(d)*.15)}px)`;});}
@@ -38,21 +39,21 @@ function releaseDrag(cancelled=false){
   const next=cancelled?target:Math.max(0,Math.min(buttons.length-1,gesture.selected+steps));
   if(next!==target)select(next);else window.syncWheel(mobile.value);
  }
- if(wheel.hasPointerCapture?.(gesture.id))wheel.releasePointerCapture(gesture.id);
+ if(swipeSurface.hasPointerCapture?.(gesture.id))swipeSurface.releasePointerCapture(gesture.id);
  moved=false;
 }
-wheel.addEventListener('pointerdown',e=>{
- if(e.button!==0||drag||e.isPrimary===false)return;
+swipeSurface.addEventListener('pointerdown',e=>{
+ if(e.button!==0||drag||e.isPrimary===false||e.target?.closest?.('.wheel-controls button'))return;
  if(!compact.matches&&e.pointerType!=='mouse')return;
  drag={x:e.clientX,y:e.clientY,lastX:e.clientX,start:position,selected:target,id:e.pointerId,horizontal:compact.matches,locked:false,time:performance.now()};moved=false;
 });
-wheel.addEventListener('pointermove',e=>{
+swipeSurface.addEventListener('pointermove',e=>{
  if(!drag||e.pointerId!==drag.id)return;
  const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
  if(drag.horizontal){
   if(!drag.locked){
    if(Math.abs(dx)<8)return;
-   drag.locked=true;cancelAnimationFrame(frame);frame=0;wheel.setPointerCapture(drag.id);
+   drag.locked=true;cancelAnimationFrame(frame);frame=0;swipeSurface.setPointerCapture(drag.id);
   }
   if(e.cancelable)e.preventDefault();
   moved=true;drag.lastX=e.clientX;
@@ -60,12 +61,14 @@ wheel.addEventListener('pointermove',e=>{
   if(!dragFrame)dragFrame=requestAnimationFrame(()=>{dragFrame=0;layout();});
   return;
  }
- if(Math.abs(dy)>8){drag.locked=true;moved=true;wheel.setPointerCapture(drag.id);select(drag.selected-dy/58);}
+ if(Math.abs(dy)>8){drag.locked=true;moved=true;swipeSurface.setPointerCapture(drag.id);select(drag.selected-dy/58);}
 });
-wheel.addEventListener('pointerup',e=>{if(drag&&e.pointerId===drag.id){drag.lastX=e.clientX;if(drag.horizontal)releaseDrag();else releaseDrag(true);}});
-wheel.addEventListener('pointercancel',()=>releaseDrag(true));
-wheel.addEventListener('lostpointercapture',()=>releaseDrag(true));
-wheel.addEventListener('click',e=>{if(e.isTrusted&&(moved||performance.now()<suppressClickUntil)){e.stopImmediatePropagation();e.preventDefault();}},true);
+swipeSurface.addEventListener('pointerup',e=>{if(drag&&e.pointerId===drag.id){drag.lastX=e.clientX;if(drag.horizontal)releaseDrag();else releaseDrag(true);}});
+swipeSurface.addEventListener('pointercancel',()=>releaseDrag(true));
+// A touched button loses its implicit capture when the swipe surface takes over.
+// That bubbled event must not cancel the gesture started on its text.
+swipeSurface.addEventListener('lostpointercapture',e=>{if(e.target===swipeSurface&&drag&&e.pointerId===drag.id)releaseDrag(true);});
+swipeSurface.addEventListener('click',e=>{if(e.isTrusted&&(moved||performance.now()<suppressClickUntil)){e.stopImmediatePropagation();e.preventDefault();}},true);
 compact.addEventListener('change',()=>{releaseDrag(true);moved=false;window.syncWheel(mobile.value)});
 window.syncWheel('shawarma');
 // TrueFocus: one moving bracket around the active Arabic word.

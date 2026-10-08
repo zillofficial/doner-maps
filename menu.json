@@ -1,5 +1,35 @@
 [
   {
+    "id": "wrap",
+    "name": "شاورما عادي",
+    "category": "shawarma",
+    "price": 140,
+    "description": "سندويش شاورما، 80 غرام.",
+    "turkish": "Normal dürüm döner",
+    "image": "photos/wrap.jpg",
+    "sourceIndex": 59
+  },
+  {
+    "id": "double",
+    "name": "شاورما دبل",
+    "category": "shawarma",
+    "price": 200,
+    "description": "سندويش شاورما، 120 غرام.",
+    "turkish": "Double dolgu dürüm döner",
+    "image": "photos/wrap.jpg",
+    "sourceIndex": 60
+  },
+  {
+    "id": "supernova",
+    "name": "شاورما سوبرنوفا",
+    "category": "shawarma",
+    "price": 230,
+    "description": "سندويش شاورما، 140 غرام.",
+    "turkish": "Supernova dürüm döner",
+    "image": "photos/wrap.jpg",
+    "sourceIndex": 61
+  },
+  {
     "id": "gourmet-cheese",
     "name": "شاورما بخبز صمون بالجبنة",
     "category": "shawarma",

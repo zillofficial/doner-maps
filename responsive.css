@@ -215,3 +215,14 @@ header nav a:last-child{display:inline-flex}
 body>header{position:sticky;top:0;z-index:100;max-width:none;width:100%;background:#fff;box-shadow:0 3px 14px #0000000a}
 html{scroll-padding-top:calc(var(--site-header-height) + 16px)}
 @media(max-width:760px){:root{--site-header-height:108px}}
+
+/* Consistent vector controls and a clean page ending, including iOS overscroll. */
+.ui-icon{display:inline-block;width:20px;height:20px;flex:none;vertical-align:middle;pointer-events:none}
+.wheel-controls button,.back-top,.iconbtn,.qty button{display:inline-flex;align-items:center;justify-content:center}
+.back-top .ui-icon{width:24px;height:24px}
+.product-preview-add,.story-link,.scroll-expand__hint{gap:6px}
+.product-preview-close .ui-icon{width:22px;height:22px}
+.empty>.ui-icon,.empty>span>.ui-icon{width:44px;height:44px}
+html{background:#111}
+body>footer{margin-bottom:0;padding-bottom:max(32px,env(safe-area-inset-bottom))}
+@media(max-width:600px){body:has(.mobile-cart.visible)>footer{padding-bottom:100px}}

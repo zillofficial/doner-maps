@@ -185,3 +185,18 @@ header nav a:last-child{display:inline-flex}
 .menu .product .add{width:100%;padding:6px 2px;font-size:12px;white-space:nowrap;border-radius:6px;min-height:44px}
 .menu .product .serving-note{font-size:11px}
 }
+
+.menu .product .add{display:flex;align-items:center;justify-content:center;text-align:center;gap:4px}
+.product-open{display:block;border:0;background:none;color:inherit;font:inherit;text-align:inherit;padding:0;width:100%;cursor:pointer}
+.product-details-link{border:0;background:none;color:#777;font:inherit;font-size:13px;min-height:44px;padding:5px 0;margin-bottom:8px;text-align:right;cursor:pointer}
+.menu .product{cursor:pointer}
+#product-dialog{inset:0;margin:auto;width:min(460px,calc(100vw - 28px));height:fit-content;max-height:calc(100dvh - 40px);padding:0;border-radius:20px;background:#fff;color:#171717;overflow:auto;overscroll-behavior:contain;box-shadow:0 24px 80px #0003}
+#product-dialog::backdrop{background:#0009;backdrop-filter:blur(4px)}
+.product-preview-close{position:absolute;top:12px;left:12px;z-index:1;width:44px;height:44px;border:1px solid #ddd;border-radius:50%;background:#fff;color:#111;font:28px Arial;display:grid;place-items:center}
+.product-preview-image{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;padding:20px;background:#fff}
+.product-preview-copy{padding:0 24px 24px;text-align:right}
+#product-preview-title{font-size:25px;line-height:1.4;margin:0 0 10px}
+.product-preview-turkish{font-size:13px;color:#777;text-align:right}
+.product-preview-description{font-size:16px;line-height:1.8;color:#444}
+.product-preview-note{font-size:12px;color:#777;line-height:1.6}
+.product-preview-price{font-size:24px}

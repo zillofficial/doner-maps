@@ -106,8 +106,11 @@ header nav{grid-area:2/1/3/3;display:flex;justify-content:center;gap:32px;width:
 }
 
 header nav a:last-child{display:inline-flex}
-/* Laptop fire: keep the footage near its native aspect ratio, not stretched edge-to-edge. */
+/* Three lightweight flame tiles on desktop; mobile keeps its original effect. */
+.bottom-flames canvas:not(:first-child){display:none}
 @media(min-width:900px) and (hover:hover) and (pointer:fine){
-.bottom-flames{inset:auto auto 0 50%;transform:translateX(-50%);width:min(680px,65vw);height:auto;aspect-ratio:800/202;mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent)}
-.bottom-flames canvas{position:absolute;inset:0;width:100%;height:100%}
+.bottom-flames{inset:auto 0 0;transform:none;width:100%;height:auto;aspect-ratio:1440/122;mask-image:none;-webkit-mask-image:none}
+.bottom-flames canvas{position:absolute;inset:auto auto 0 0;width:33.34%;height:100%;display:block;mask-image:none;-webkit-mask-image:none}
+.bottom-flames canvas:nth-child(2){display:block;left:33.33%;transform:scaleX(-1)}
+.bottom-flames canvas:nth-child(3){display:block;left:66.66%}
 }

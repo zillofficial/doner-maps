@@ -34,8 +34,14 @@ function showProduct(id){const p=products.find(item=>item.id===id);if(!p)return;
  productDialog.querySelector('.product-preview-description').textContent=p.description;
  productDialog.querySelector('.product-preview-note').textContent=p.imageNote||'';
  productDialog.querySelector('.product-preview-price').textContent=money(p.price);
+ productDialog.querySelector(".product-preview-add").dataset.productId=p.id;
  productDialog.showModal();
 }
 document.addEventListener('click',e=>{const card=e.target.closest('#products .product');if(!card||e.target.closest('[data-add],input,select,label'))return;showProduct(card.dataset.product)});
 productDialog.querySelector('.product-preview-close').addEventListener('click',()=>productDialog.close());
 productDialog.addEventListener('click',e=>{if(e.target===productDialog){const r=productDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)productDialog.close()}});
+
+productDialog.querySelector('.product-preview-add').addEventListener('click',e=>{
+ const id=e.currentTarget.dataset.productId;
+ if(change(id,1)){productDialog.close();notify('اتضافت للسلة · بالهنا!')}
+});

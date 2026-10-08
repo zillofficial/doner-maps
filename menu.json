@@ -111,7 +111,7 @@
     "category": "portions",
     "price": 300,
     "description": "180 غرام من شرائح الشاورما المحمّرة، مع البطاطس والخضار والمخلل وكول سلو وصوصات المايونيز الحار والبارد.",
-    "image": "photos/portion.jpg",
+    "image": "clean-portion.webp",
     "turkish": "Porsiyon Döner Menü",
     "sourceIndex": 21
   },
@@ -121,7 +121,7 @@
     "category": "portions",
     "price": 380,
     "description": "240 غرام من شرائح الشاورما المحمّرة، مع البطاطس والخضار والمخلل وكول سلو وصوصات المايونيز الحار والبارد.",
-    "image": "photos/portion.jpg",
+    "image": "clean-portion.webp",
     "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
     "turkish": "Süper Porsiyon Döner",
     "sourceIndex": 25
@@ -142,7 +142,7 @@
     "category": "portions",
     "price": 220,
     "description": "أرز أبيض مع 80 غرام من شرائح الشاورما، يُقدّم مع عيران ومخلل الفلفل والشطّة.",
-    "image": "photos/rice-doner.jpg",
+    "image": "clean-rice-doner.webp",
     "turkish": "Pilav Üstü Döner",
     "sourceIndex": 28
   },
@@ -152,7 +152,7 @@
     "category": "arabic",
     "price": 330,
     "description": "6 قطع شاورما بخبز الصمون، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم. مع جبنة القشقوان.",
-    "image": "photos/arabic-bun.jpg",
+    "image": "clean-arabic-bun.webp",
     "turkish": "Kaşarlı Gurme Ekmeği Arap Döner Menü",
     "sourceIndex": 4
   },
@@ -204,7 +204,7 @@
     "category": "arabic",
     "price": 280,
     "description": "6 قطع شاورما بخبز الصمون، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
-    "image": "photos/arabic-bun.jpg",
+    "image": "clean-arabic-bun.webp",
     "turkish": "Gurme Ekmeği Arap Döner Menü",
     "sourceIndex": 22
   },
@@ -269,7 +269,7 @@
     "price": 220,
     "description": "طبق بطاطس مع صوصات الشيدر والباربكيو والكوكتيل، و3 أصابع جبنة و3 حلقات بصل.",
     "turkish": "Combo Patates",
-    "image": "product-combo.webp",
+    "image": "clean-product-combo.webp",
     "sourceIndex": 35
   },
   {
@@ -279,7 +279,7 @@
     "price": 175,
     "description": "طبق بطاطس مقلية مع صوص الباربكيو.",
     "turkish": "Barbekülü Patates",
-    "image": "product-bbq-fries.webp",
+    "image": "clean-product-bbq-fries.webp",
     "sourceIndex": 36
   },
   {
@@ -288,7 +288,7 @@
     "category": "potatoes",
     "price": 150,
     "description": "طبق بطاطس مقلية متبّلة، مع الثوم والكاتشب.",
-    "image": "photos/fries.jpg",
+    "image": "clean-fries.webp",
     "turkish": "Baharatlı Patates",
     "sourceIndex": 37
   },
@@ -299,7 +299,7 @@
     "price": 200,
     "description": "طبق بطاطس مقلية مغطّى بصوص جبنة الشيدر.",
     "turkish": "Cheddarlı Patates",
-    "image": "product-cheddar-fries.webp",
+    "image": "clean-product-cheddar-fries.webp",
     "sourceIndex": 39
   },
   {
@@ -320,7 +320,7 @@
     "price": 50,
     "description": "6 قطع من حلقات البصل المقرمشة.",
     "turkish": "Soğan Halkası",
-    "image": "product-onion-rings.webp",
+    "image": "clean-product-onion-rings.webp",
     "sourceIndex": 32
   },
   {
@@ -350,7 +350,7 @@
     "price": 30,
     "description": "علبة سلطة كول سلو جانبية.",
     "turkish": "Coleslaw Salatası",
-    "image": "product-coleslaw.webp",
+    "image": "clean-product-coleslaw.webp",
     "sourceIndex": 54
   },
   {
@@ -360,7 +360,7 @@
     "price": 30,
     "description": "صوص حار — علبة 80 غرام.",
     "turkish": "Acılı Sos",
-    "image": "product-hot.webp",
+    "image": "clean-product-hot.webp",
     "sourceIndex": 55
   },
   {
@@ -370,7 +370,7 @@
     "price": 85,
     "description": "صوص جبنة الشيدر — علبة 80 غرام.",
     "turkish": "Cheddar Sos",
-    "image": "product-cheddar.webp",
+    "image": "clean-product-cheddar.webp",
     "sourceIndex": 56
   },
   {
@@ -380,7 +380,7 @@
     "price": 30,
     "description": "صوص كوكتيل — علبة 80 غرام.",
     "turkish": "Kokteyl Sos",
-    "image": "product-cocktail.webp",
+    "image": "clean-product-cocktail.webp",
     "sourceIndex": 57
   },
   {
@@ -390,7 +390,7 @@
     "price": 30,
     "description": "صوص الثوم — علبة 80 غرام.",
     "turkish": "Sarımsaklı Mayonez",
-    "image": "product-garlic.webp",
+    "image": "clean-product-garlic.webp",
     "sourceIndex": 58
   },
   {
@@ -470,7 +470,7 @@
     "price": 40,
     "turkish": "Mango Meyve Suyu",
     "description": "مشروب جوس بقطع المانجو.",
-    "image": "product-mango.webp",
+    "image": "clean-product-mango.webp",
     "sourceIndex": 49
   },
   {

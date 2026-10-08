@@ -155,3 +155,33 @@ header nav a:last-child{display:inline-flex}
 .bottom-flames.flames-tiled canvas:nth-child(even){transform:scaleX(-1)}
 
 @media(max-width:1100px),(any-pointer:coarse){.wheel-navigation,.wheel-navigation *{touch-action:pinch-zoom;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}.wheel-navigation{cursor:grab}.wheel-navigation:active{cursor:grabbing}}
+
+/* Compact three-column catalog: the supplied photos remain the visual anchor. */
+.menu .products{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.menu .product{min-width:0;overflow:hidden}
+.menu .product-body{padding:14px;min-width:0}
+.menu .product h3{font-size:19px;line-height:1.45;overflow-wrap:anywhere}
+.menu .product-details{margin:0 0 12px;font-size:14px;color:#666}
+.menu .product-details summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:5px}
+.menu .product-details summary:before{content:'+';color:#ed241c;font-size:18px}
+.menu .product-details[open] summary:before{content:'−'}
+.menu .product-details p{font-size:14px;min-height:0;margin:4px 0 8px;line-height:1.6}
+.menu .product-bottom{gap:8px;flex-wrap:wrap}
+.menu .product .add{min-height:44px}
+@media(max-width:600px){
+.menu{padding-inline:10px}
+.menu .products{gap:8px}
+.menu .product{border-radius:12px}
+.menu .product-photo.real-photo,.menu .product-photo.photo-pending{aspect-ratio:1}
+.menu .product-photo.real-photo img{padding:4px}
+.menu .product-photo.drink-photo img{padding:8px}
+.menu .product-photo.sauce-photo img{padding:0}
+.menu .product-body{padding:9px 7px}
+.menu .product h3{font-size:14px;line-height:1.4;margin:0 0 4px;font-weight:800}
+.menu .product-details{font-size:12px;margin-bottom:4px}
+.menu .product-details p{font-size:12px}
+.menu .product-bottom{flex-direction:column;align-items:stretch;padding-top:8px;gap:7px}
+.menu .price{font-size:18px;line-height:1.3}
+.menu .product .add{width:100%;padding:6px 2px;font-size:12px;white-space:nowrap;border-radius:6px;min-height:44px}
+.menu .product .serving-note{font-size:11px}
+}

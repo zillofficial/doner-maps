@@ -140,3 +140,6 @@ header nav a:last-child{display:inline-flex}
 @media(min-width:1101px){.favorites{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:601px) and (max-width:1100px){.favorite-slogan{grid-column:1/-1}.favorites .favorite-slogan{min-height:330px}.favorites .favorite-slogan h3{margin-top:24px}}
 @media(max-width:600px){.favorites .favorite-slogan{min-height:430px;padding:28px}.favorites .favorite-slogan h3{font-size:60px}}
+
+/* Keep finger-driven transforms cheap on mobile; preserve the curved selector. */
+@media(max-width:1100px),(any-pointer:coarse){.menu .filters{user-select:none;-webkit-user-select:none;overscroll-behavior-x:contain}.menu .filters button{will-change:transform;transition:color .15s;filter:none!important;-webkit-tap-highlight-color:transparent}}

@@ -2,7 +2,8 @@
 (()=>{
  const root=document.querySelector('#site-intro');if(!root)return;
  const covered=[...document.querySelectorAll('body > header, body > main, body > footer, .mobile-cart')];covered.forEach(el=>el.inert=true);
- const started=performance.now(),reduced=matchMedia('(prefers-reduced-motion: reduce)'),desktop=matchMedia('(min-width:900px) and (hover:hover) and (pointer:fine)');
+ const started=performance.now(),reduced=matchMedia('(prefers-reduced-motion: reduce)'),desktop=matchMedia('(min-width:600px)');
+ const fire=root.querySelector('.intro-fire');if(desktop.matches){fire.classList.add('intro-tiled');fire.replaceChildren(...Array.from({length:Math.ceil(innerWidth/480)},()=>document.createElement('canvas')));}
  const video=document.createElement('video'),canvases=[...root.querySelectorAll('canvas')],contexts=canvases.map(c=>c.getContext('2d',{willReadFrequently:true}));let raf=0,last=0,closed=false;
  function finish(){if(closed)return;closed=true;covered.forEach(el=>el.inert=false);cancelAnimationFrame(raf);video.pause();document.documentElement.classList.remove('intro-loading');root.classList.add('intro-done');setTimeout(()=>root.remove(),450);}
  window.closeSiteIntro=finish;

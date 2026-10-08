@@ -106,14 +106,8 @@ header nav{grid-area:2/1/3/3;display:flex;justify-content:center;gap:32px;width:
 }
 
 header nav a:last-child{display:inline-flex}
-/* Three lightweight flame tiles on desktop; mobile keeps its original effect. */
+/* Additional tiles are enabled only on tablet and desktop. */
 .bottom-flames canvas:not(:first-child){display:none}
-@media(min-width:900px) and (hover:hover) and (pointer:fine){
-.bottom-flames{inset:auto 0 0;transform:none;width:100%;height:auto;aspect-ratio:1440/122;mask-image:none;-webkit-mask-image:none}
-.bottom-flames canvas{position:absolute;inset:auto auto 0 0;width:33.34%;height:100%;display:block;mask-image:none;-webkit-mask-image:none}
-.bottom-flames canvas:nth-child(2){display:block;left:33.33%;transform:scaleX(-1)}
-.bottom-flames canvas:nth-child(3){display:block;left:66.66%}
-}
 
 /* Catalog photography: the same image frame and reading rhythm for every item. */
 .menu .product-photo.real-photo,.menu .product-photo.photo-pending{aspect-ratio:4/3;flex:none;height:auto;min-height:0;background:#fff;border-bottom:1px solid #f1f1f1}
@@ -143,3 +137,19 @@ header nav a:last-child{display:inline-flex}
 
 /* Keep finger-driven transforms cheap on mobile; preserve the curved selector. */
 @media(max-width:1100px),(any-pointer:coarse){.menu .filters{user-select:none;-webkit-user-select:none;overscroll-behavior-x:contain}.menu .filters button{will-change:transform;transition:color .15s;filter:none!important;-webkit-tap-highlight-color:transparent}}
+
+/* The bounded swipe zone owns touch gestures; the rest of the page scrolls normally. */
+@media(max-width:1100px),(any-pointer:coarse){
+.wheel-navigation{position:relative;padding:0 44px}
+.wheel-navigation .wheel-controls{position:static;margin:0;display:block}
+.wheel-controls button{position:absolute;top:34px;z-index:2;background:#222}
+#wheel-prev{right:0;transform:rotate(90deg)}
+#wheel-next{left:0;transform:rotate(90deg)}
+.wheel-controls span{position:absolute;top:128px;left:0;width:100%;text-align:center;pointer-events:none}
+.wheel-controls span:after{content:'استخدم الأسهم أو اسحب لاختيار قسمك';font-size:12px}
+.menu .filters,.menu .filters button{touch-action:pinch-zoom}
+.menu .filters{height:155px}
+}
+.bottom-flames.flames-tiled{height:122px;aspect-ratio:auto;mask-image:none;-webkit-mask-image:none}
+.bottom-flames.flames-tiled canvas{display:block;position:absolute;bottom:0;left:0;width:480px;height:122px;max-width:none;mask-image:none;-webkit-mask-image:none}
+.bottom-flames.flames-tiled canvas:nth-child(even){transform:scaleX(-1)}

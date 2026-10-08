@@ -209,3 +209,9 @@ header nav a:last-child{display:inline-flex}
 :root{--font-turkish:Arial,Helvetica,sans-serif}
 :lang(tr){font-family:var(--font-turkish);font-synthesis:none}
 .product-preview-turkish,.menu .product-turkish{font-family:var(--font-turkish);font-weight:400;letter-spacing:normal}
+
+/* Keep the restaurant identity and cart reachable while browsing. */
+:root{--site-header-height:80px}
+body>header{position:sticky;top:0;z-index:100;max-width:none;width:100%;background:#fff;box-shadow:0 3px 14px #0000000a}
+html{scroll-padding-top:calc(var(--site-header-height) + 16px)}
+@media(max-width:760px){:root{--site-header-height:108px}}

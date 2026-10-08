@@ -126,3 +126,6 @@ header nav a:last-child{display:inline-flex}
 .menu .photo-pending img{width:44px;height:58px;object-fit:contain;opacity:.45}
 .menu .text-product .product-body{min-height:0}
 @media(max-width:760px){.menu .product-photo.real-photo,.menu .product-photo.photo-pending{aspect-ratio:4/3}.menu .product-photo.real-photo img{padding:10px}.menu .product-photo.drink-photo img{padding:20px}.menu .product-photo.sauce-photo img{padding:0}.menu .product .product-turkish{font-size:11px}}
+
+/* Only the two bestsellers confirmed by the WhatsApp catalog remain. */
+@media(min-width:761px){.favorites{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -1,66 +1,45 @@
 const menuItems=[
   {
-    "id": "wrap",
-    "name": "شاورما عادي",
+    "id": "gourmet-cheese",
+    "name": "شاورما بخبز صمون بالجبنة",
     "category": "shawarma",
-    "price": 140,
-    "description": "80 غرام من شاورما الدجاج في خبز ملفوف ومحمّص.",
-    "image": "photos/wrap.jpg",
-    "cheese": 50,
-    "turkish": "Dürüm Döner"
+    "price": 240,
+    "description": "خبز صمون محشوّ بـ110 غرام من شرائح شاورما الدجاج. مع جبنة القشقوان.",
+    "turkish": "Kaşarlı Gurme Ekmeği Döner",
+    "image": "product-gourmet.webp",
+    "sourceIndex": 0
   },
   {
-    "id": "double",
-    "name": "شاورما دبل",
-    "category": "shawarma",
-    "price": 200,
-    "description": "120 غرام من شاورما الدجاج في خبز ملفوف ومحمّص.",
-    "image": "photos/wrap.jpg",
-    "cheese": 50,
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
-    "turkish": "Dürüm Döner Double Dolgu"
-  },
-  {
-    "id": "supernova",
-    "name": "شاورما سوبرنوفا",
-    "category": "shawarma",
-    "price": 230,
-    "description": "140 غرام من شاورما الدجاج في خبز ملفوف ومحمّص.",
-    "image": "photos/wrap.jpg",
-    "cheese": 75,
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
-    "turkish": "Dürüm Döner Supernova"
-  },
-  {
-    "id": "gourmet",
-    "name": "شاورما بخبز صمون",
+    "id": "wrap-cheese",
+    "name": "شاورما عادي بالجبنة",
     "category": "shawarma",
     "price": 190,
-    "description": "خبز صمون محشوّ بـ110 غرام من شرائح شاورما الدجاج.",
-    "cheese": 50,
-    "turkish": "Gurme Ekmeği Döner",
-    "image": "product-gourmet.webp",
-    "cheeseImage": "product-gourmet.webp"
+    "description": "80 غرام من شاورما الدجاج في خبز ملفوف ومحمّص. مع جبنة القشقوان.",
+    "image": "photos/wrap.jpg",
+    "turkish": "Kaşarlı Dürüm Döner",
+    "sourceIndex": 1
   },
   {
-    "id": "finger",
-    "name": "إصبع شاورما",
+    "id": "supernova-cheese",
+    "name": "شاورما سوبرنوفا بالجبنة",
     "category": "shawarma",
-    "price": 90,
-    "description": "لفّة شاورما صغيرة ومحمّصة، بحشوة 55 غرام من الدجاج.",
-    "turkish": "Mini Döner",
-    "image": "product-finger.webp",
-    "retouched": true
+    "price": 305,
+    "description": "140 غرام من شاورما الدجاج في خبز ملفوف ومحمّص. مع جبنة القشقوان.",
+    "image": "photos/wrap.jpg",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "turkish": "Kaşarlı Dürüm Döner Supernova",
+    "sourceIndex": 2
   },
   {
-    "id": "gourmet-double",
-    "name": "شاورما صمون دبل",
+    "id": "double-cheese",
+    "name": "شاورما دبل بالجبنة",
     "category": "shawarma",
-    "price": 260,
-    "turkish": "Double Dolgu Gurme Ekmeği Döner",
-    "description": "خبز صمون محشوّ بـ140 غرام من شرائح شاورما الدجاج.",
-    "image": "product-gourmet.webp",
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار."
+    "price": 250,
+    "description": "120 غرام من شاورما الدجاج في خبز ملفوف ومحمّص. مع جبنة القشقوان.",
+    "image": "photos/wrap.jpg",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "turkish": "Kaşarlı Dürüm Döner Double Dolgu",
+    "sourceIndex": 3
   },
   {
     "id": "wrap-fries",
@@ -69,7 +48,8 @@ const menuItems=[
     "price": 200,
     "turkish": "Dürüm Döner ve Patates Paketi",
     "description": "سندويش شاورما 80 غرام، مع كيس بطاطس وكريم الثوم.",
-    "image": "product-wrap-fries.webp"
+    "image": "product-wrap-fries.webp",
+    "sourceIndex": 8
   },
   {
     "id": "double-fries",
@@ -79,7 +59,8 @@ const menuItems=[
     "turkish": "Double Dürüm Döner ve Patates Paketi",
     "description": "سندويش شاورما 120 غرام، مع كيس بطاطس وكريم الثوم.",
     "image": "product-wrap-fries.webp",
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار."
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "sourceIndex": 9
   },
   {
     "id": "supernova-fries",
@@ -89,23 +70,40 @@ const menuItems=[
     "turkish": "Supernova Dürüm Döner ve Patates Paketi",
     "description": "سندويش شاورما 140 غرام، مع كيس بطاطس وكريم الثوم.",
     "image": "product-wrap-fries.webp",
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار."
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "sourceIndex": 10
   },
   {
-    "id": "potato-wrap",
-    "name": "سندويش بطاطس بخبز سياحي",
+    "id": "gourmet",
+    "name": "شاورما بخبز صمون",
     "category": "shawarma",
-    "price": 140,
-    "description": "سندويش بطاطس في خبز سياحي.",
-    "turkish": "Lavaş Patates Dürüm"
+    "price": 190,
+    "description": "خبز صمون محشوّ بـ110 غرام من شرائح شاورما الدجاج.",
+    "turkish": "Gurme Ekmeği Döner",
+    "image": "product-gourmet.webp",
+    "sourceIndex": 14
   },
   {
-    "id": "potato-bun",
-    "name": "سندويش بطاطس بخبز صمون",
+    "id": "finger",
+    "name": "إصبع شاورما",
     "category": "shawarma",
-    "price": 160,
-    "description": "سندويش بطاطس في خبز صمون.",
-    "turkish": "Gurme Ekmeği Patates"
+    "price": 90,
+    "description": "لفّة شاورما صغيرة ومحمّصة، بحشوة 55 غرام من الدجاج.",
+    "turkish": "Mini Döner",
+    "image": "product-finger.webp",
+    "retouched": true,
+    "sourceIndex": 18
+  },
+  {
+    "id": "gourmet-double",
+    "name": "شاورما صمون دبل",
+    "category": "shawarma",
+    "price": 260,
+    "turkish": "Double Dolgu Gurme Ekmeği Döner",
+    "description": "خبز صمون محشوّ بـ140 غرام من شرائح شاورما الدجاج.",
+    "image": "product-gourmet.webp",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "sourceIndex": 19
   },
   {
     "id": "portion",
@@ -114,7 +112,8 @@ const menuItems=[
     "price": 300,
     "description": "180 غرام من شرائح الشاورما المحمّرة، مع البطاطس والخضار والمخلل وكول سلو وصوصات المايونيز الحار والبارد.",
     "image": "photos/portion.jpg",
-    "turkish": "Porsiyon Döner Menü"
+    "turkish": "Porsiyon Döner Menü",
+    "sourceIndex": 21
   },
   {
     "id": "portion-super",
@@ -124,7 +123,8 @@ const menuItems=[
     "description": "240 غرام من شرائح الشاورما المحمّرة، مع البطاطس والخضار والمخلل وكول سلو وصوصات المايونيز الحار والبارد.",
     "image": "photos/portion.jpg",
     "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
-    "turkish": "Süper Porsiyon Döner"
+    "turkish": "Süper Porsiyon Döner",
+    "sourceIndex": 25
   },
   {
     "id": "half-kilo",
@@ -133,7 +133,8 @@ const menuItems=[
     "price": 550,
     "description": "500 غرام من شرائح الشاورما المحمّرة، مع بطاطس ورغيفين محمّرين وخضار ومخلل، و3 كول سلو و3 مايونيز و2 مايونيز حار ودبس.",
     "image": "photos/family-meal.jpg",
-    "turkish": "Yarım Kilo Döner Paket"
+    "turkish": "Yarım Kilo Döner Paket",
+    "sourceIndex": 26
   },
   {
     "id": "rice-doner",
@@ -142,15 +143,50 @@ const menuItems=[
     "price": 220,
     "description": "أرز أبيض مع 80 غرام من شرائح الشاورما، يُقدّم مع عيران ومخلل الفلفل والشطّة.",
     "image": "photos/rice-doner.jpg",
-    "turkish": "Pilav Üstü Döner"
+    "turkish": "Pilav Üstü Döner",
+    "sourceIndex": 28
   },
   {
-    "id": "rice",
-    "name": "رز أبيض سادة",
-    "category": "portions",
-    "price": 110,
-    "description": "طبق أرز أبيض سادة.",
-    "turkish": "Sade Pilav"
+    "id": "arabic-bun-cheese",
+    "name": "شاورما عربي بخبز صمون بالجبنة",
+    "category": "arabic",
+    "price": 330,
+    "description": "6 قطع شاورما بخبز الصمون، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم. مع جبنة القشقوان.",
+    "image": "photos/arabic-bun.jpg",
+    "turkish": "Kaşarlı Gurme Ekmeği Arap Döner Menü",
+    "sourceIndex": 4
+  },
+  {
+    "id": "arabic-double-cheese",
+    "name": "شاورما عربي دبل بالجبنة",
+    "category": "arabic",
+    "price": 490,
+    "description": "12 قطعة شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم. مع جبنة القشقوان.",
+    "image": "photos/arabic-cheese.jpg",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "turkish": "Kaşarlı Double Arap Döner Menü",
+    "sourceIndex": 5
+  },
+  {
+    "id": "arabic-super-cheese",
+    "name": "شاورما عربي سوبر بالجبنة",
+    "category": "arabic",
+    "price": 410,
+    "description": "9 قطع شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم. مع جبنة القشقوان.",
+    "image": "photos/arabic-cheese.jpg",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "turkish": "Kaşarlı Süper Arap Döner Menü",
+    "sourceIndex": 6
+  },
+  {
+    "id": "arabic-cheese",
+    "name": "شاورما عربي عادي بالجبنة",
+    "category": "arabic",
+    "price": 300,
+    "description": "6 قطع شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم. مع جبنة القشقوان.",
+    "image": "photos/arabic-cheese.jpg",
+    "turkish": "Kaşarlı Arap Döner Menü",
+    "sourceIndex": 7
   },
   {
     "id": "arabic",
@@ -158,34 +194,9 @@ const menuItems=[
     "category": "arabic",
     "price": 250,
     "description": "6 قطع شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
-    "cheese": 50,
     "image": "photos/arabic-cheese.jpg",
-    "cheeseImage": "photos/arabic-cheese.jpg",
-    "turkish": "Arap Döner Menü"
-  },
-  {
-    "id": "arabic-super",
-    "name": "شاورما عربي سوبر",
-    "category": "arabic",
-    "price": 335,
-    "description": "9 قطع شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
-    "cheese": 75,
-    "image": "photos/arabic-cheese.jpg",
-    "cheeseImage": "photos/arabic-cheese.jpg",
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
-    "turkish": "Süper Arap Döner Menü"
-  },
-  {
-    "id": "arabic-double",
-    "name": "شاورما عربي دبل",
-    "category": "arabic",
-    "price": 390,
-    "description": "12 قطعة شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
-    "cheese": 100,
-    "image": "photos/arabic-cheese.jpg",
-    "cheeseImage": "photos/arabic-cheese.jpg",
-    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
-    "turkish": "Double Arap Döner Menü"
+    "turkish": "Arap Döner Menü",
+    "sourceIndex": 20
   },
   {
     "id": "arabic-bun",
@@ -193,9 +204,31 @@ const menuItems=[
     "category": "arabic",
     "price": 280,
     "description": "6 قطع شاورما بخبز الصمون، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
-    "cheese": 50,
     "image": "photos/arabic-bun.jpg",
-    "turkish": "Gurme Ekmeği Arap Döner Menü"
+    "turkish": "Gurme Ekmeği Arap Döner Menü",
+    "sourceIndex": 22
+  },
+  {
+    "id": "arabic-super",
+    "name": "شاورما عربي سوبر",
+    "category": "arabic",
+    "price": 335,
+    "description": "9 قطع شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
+    "image": "photos/arabic-cheese.jpg",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "turkish": "Süper Arap Döner Menü",
+    "sourceIndex": 23
+  },
+  {
+    "id": "arabic-double",
+    "name": "شاورما عربي دبل",
+    "category": "arabic",
+    "price": 390,
+    "description": "12 قطعة شاورما عربي، مع البطاطس والخضار والمخلل وكول سلو وكريم الثوم.",
+    "image": "photos/arabic-cheese.jpg",
+    "imageNote": "صورة الصنف؛ الكمية حسب الحجم المختار.",
+    "turkish": "Double Arap Döner Menü",
+    "sourceIndex": 24
   },
   {
     "id": "bohca",
@@ -204,25 +237,8 @@ const menuItems=[
     "price": 400,
     "description": "رغيفا صاج محشوّان بـ125 غرام من الشاورما مع الفطر والموزاريلا، وبطاطس وثوم ومخلل وكول سلو. تُقدّم مع كولا.",
     "image": "photos/round-meal.jpg",
-    "turkish": "Bohça Döner Menü"
-  },
-  {
-    "id": "maria",
-    "name": "ماريا إكسترا",
-    "category": "special",
-    "price": 375,
-    "description": "150 غرام شاورما بين طبقتي خبز لافاش، مع قشقوان وصوص فطر. تُقدّم مع مقبلات وبطاطس وصوصات.",
-    "turkish": "Maria Extra Menüsü"
-  },
-  {
-    "id": "zinger-sandwich",
-    "name": "سندويش زنجر",
-    "category": "crispy",
-    "price": 220,
-    "description": "دجاج زنجر مقرمش بصوص حار، مع الخس والصوص في خبز بالسمسم.",
-    "turkish": "Zincer Sandviç",
-    "image": "product-zinger-sandwich.webp",
-    "retouched": true
+    "turkish": "Bohça Döner Menü",
+    "sourceIndex": 30
   },
   {
     "id": "crispy-sandwich",
@@ -232,32 +248,29 @@ const menuItems=[
     "description": "دجاج كرسبي مقرمش مع الخس والصوص في خبز بالسمسم.",
     "turkish": "Çıtır Tavuk Sandviç",
     "image": "product-crispy-sandwich.webp",
-    "retouched": true
+    "retouched": true,
+    "sourceIndex": 16
   },
   {
-    "id": "zinger-meal",
-    "name": "وجبة زنجر حار",
+    "id": "zinger-sandwich",
+    "name": "سندويش زنجر",
     "category": "crispy",
-    "price": 320,
-    "description": "وجبة زنجر بالدجاج الحار.",
-    "turkish": "Zincer Menü (Acılı)"
+    "price": 220,
+    "description": "دجاج زنجر مقرمش بصوص حار، مع الخس والصوص في خبز بالسمسم.",
+    "turkish": "Zincer Sandviç",
+    "image": "product-zinger-sandwich.webp",
+    "retouched": true,
+    "sourceIndex": 17
   },
   {
-    "id": "crispy",
-    "name": "وجبة كرسبي",
-    "category": "crispy",
-    "price": 300,
-    "description": "وجبة دجاج كرسبي مقرمش.",
-    "turkish": "Çıtır Tavuk Menü"
-  },
-  {
-    "id": "fries",
-    "name": "طبق بطاطس",
+    "id": "combo",
+    "name": "كومبو",
     "category": "potatoes",
-    "price": 150,
-    "description": "طبق بطاطس مقلية متبّلة، مع الثوم والكاتشب.",
-    "image": "photos/fries.jpg",
-    "turkish": "Baharatlı Patates"
+    "price": 220,
+    "description": "طبق بطاطس مع صوصات الشيدر والباربكيو والكوكتيل، و3 أصابع جبنة و3 حلقات بصل.",
+    "turkish": "Combo Patates",
+    "image": "product-combo.webp",
+    "sourceIndex": 35
   },
   {
     "id": "bbq-fries",
@@ -266,7 +279,18 @@ const menuItems=[
     "price": 175,
     "description": "طبق بطاطس مقلية مع صوص الباربكيو.",
     "turkish": "Barbekülü Patates",
-    "image": "product-bbq-fries.webp"
+    "image": "product-bbq-fries.webp",
+    "sourceIndex": 36
+  },
+  {
+    "id": "fries",
+    "name": "طبق بطاطس",
+    "category": "potatoes",
+    "price": 150,
+    "description": "طبق بطاطس مقلية متبّلة، مع الثوم والكاتشب.",
+    "image": "photos/fries.jpg",
+    "turkish": "Baharatlı Patates",
+    "sourceIndex": 37
   },
   {
     "id": "cheddar-fries",
@@ -275,7 +299,8 @@ const menuItems=[
     "price": 200,
     "description": "طبق بطاطس مقلية مغطّى بصوص جبنة الشيدر.",
     "turkish": "Cheddarlı Patates",
-    "image": "product-cheddar-fries.webp"
+    "image": "product-cheddar-fries.webp",
+    "sourceIndex": 39
   },
   {
     "id": "spicy-fries",
@@ -285,34 +310,8 @@ const menuItems=[
     "description": "بطاطس بالصوص الحار، مع شرائح الفلفل.",
     "turkish": "Spesiyal Acılı Patates",
     "image": "product-spicy-fries.webp",
-    "retouched": true
-  },
-  {
-    "id": "combo",
-    "name": "كومبو",
-    "category": "potatoes",
-    "price": 220,
-    "description": "طبق بطاطس مع صوصات الشيدر والباربكيو والكوكتيل، و3 أصابع جبنة و3 حلقات بصل.",
-    "turkish": "Combo Patates",
-    "image": "product-combo.webp"
-  },
-  {
-    "id": "potato-pack",
-    "name": "كيس بطاطس",
-    "category": "extras",
-    "price": 60,
-    "description": "كيس صغير من البطاطس المقلية.",
-    "turkish": "Patates Paketi",
-    "image": "product-potato-pack.webp"
-  },
-  {
-    "id": "cheese-sticks",
-    "name": "أصابع جبنة",
-    "category": "extras",
-    "price": 100,
-    "description": "6 أصابع من جبنة الموزاريلا المقرمشة.",
-    "turkish": "Peynir Çubukları",
-    "image": "product-cheese-sticks.webp"
+    "retouched": true,
+    "sourceIndex": 40
   },
   {
     "id": "onion-rings",
@@ -321,31 +320,28 @@ const menuItems=[
     "price": 50,
     "description": "6 قطع من حلقات البصل المقرمشة.",
     "turkish": "Soğan Halkası",
-    "image": "product-onion-rings.webp"
+    "image": "product-onion-rings.webp",
+    "sourceIndex": 32
   },
   {
-    "id": "mixed-box",
-    "name": "علبة مشكلة",
+    "id": "potato-pack",
+    "name": "كيس بطاطس",
+    "category": "extras",
+    "price": 60,
+    "description": "كيس صغير من البطاطس المقلية.",
+    "turkish": "Patates Paketi",
+    "image": "product-potato-pack.webp",
+    "sourceIndex": 33
+  },
+  {
+    "id": "cheese-sticks",
+    "name": "أصابع جبنة",
     "category": "extras",
     "price": 100,
-    "description": "علبة مشكلة من 3 أصابع جبنة و3 حلقات بصل.",
-    "turkish": "Karışık Kutu"
-  },
-  {
-    "id": "muhamara",
-    "name": "محمرة بالقشقوان",
-    "category": "extras",
-    "price": 150,
-    "description": "محمرة مع جبنة القشقوان.",
-    "turkish": "Kaşarlı Muhamara"
-  },
-  {
-    "id": "mozzarella",
-    "name": "إضافة جبنة موزاريلا",
-    "category": "extras",
-    "price": 50,
-    "description": "إضافة موزاريلا لوجبتك؛ حدّد الصنف المطلوب في ملاحظات الطلب.",
-    "turkish": "Mozzarella İlavesi"
+    "description": "6 أصابع من جبنة الموزاريلا المقرمشة.",
+    "turkish": "Peynir Çubukları",
+    "image": "product-cheese-sticks.webp",
+    "sourceIndex": 34
   },
   {
     "id": "coleslaw",
@@ -354,25 +350,8 @@ const menuItems=[
     "price": 30,
     "description": "علبة سلطة كول سلو جانبية.",
     "turkish": "Coleslaw Salatası",
-    "image": "product-coleslaw.webp"
-  },
-  {
-    "id": "garlic",
-    "name": "صوص الثوم",
-    "category": "sauces",
-    "price": 30,
-    "description": "صوص الثوم — علبة 80 غرام.",
-    "turkish": "Sarımsaklı Mayonez",
-    "image": "product-garlic.webp"
-  },
-  {
-    "id": "cocktail",
-    "name": "صوص كوكتيل",
-    "category": "sauces",
-    "price": 30,
-    "description": "صوص كوكتيل — علبة 80 غرام.",
-    "turkish": "Kokteyl Sos",
-    "image": "product-cocktail.webp"
+    "image": "product-coleslaw.webp",
+    "sourceIndex": 54
   },
   {
     "id": "hot",
@@ -381,7 +360,8 @@ const menuItems=[
     "price": 30,
     "description": "صوص حار — علبة 80 غرام.",
     "turkish": "Acılı Sos",
-    "image": "product-hot.webp"
+    "image": "product-hot.webp",
+    "sourceIndex": 55
   },
   {
     "id": "cheddar",
@@ -390,61 +370,28 @@ const menuItems=[
     "price": 85,
     "description": "صوص جبنة الشيدر — علبة 80 غرام.",
     "turkish": "Cheddar Sos",
-    "image": "product-cheddar.webp"
+    "image": "product-cheddar.webp",
+    "sourceIndex": 56
   },
   {
-    "id": "cola",
-    "name": "كولا بروكس",
-    "category": "drinks",
-    "price": 50,
-    "description": "كولا بروكس — علبة 330 مل.",
-    "turkish": "Kola",
-    "image": "product-cola.webp"
+    "id": "cocktail",
+    "name": "صوص كوكتيل",
+    "category": "sauces",
+    "price": 30,
+    "description": "صوص كوكتيل — علبة 80 غرام.",
+    "turkish": "Kokteyl Sos",
+    "image": "product-cocktail.webp",
+    "sourceIndex": 57
   },
   {
-    "id": "fanta",
-    "name": "بروكس برتقال",
-    "category": "drinks",
-    "price": 50,
-    "description": "مشروب بروكس الغازي بنكهة البرتقال — 250 مل.",
-    "turkish": "Portakal Aromalı Gazoz",
-    "image": "product-fanta.webp"
-  },
-  {
-    "id": "gazoz",
-    "name": "بروكس ليمون",
-    "category": "drinks",
-    "price": 50,
-    "description": "مشروب بروكس الغازي بنكهة الليمون — 250 مل.",
-    "turkish": "Limon Aromalı Gazoz",
-    "image": "product-gazoz.webp"
-  },
-  {
-    "id": "juice",
-    "name": "عصير أناناس",
-    "category": "drinks",
-    "price": 40,
-    "description": "مشروب جوس بقطع الأناناس.",
-    "turkish": "Ananas Meyve Suyu",
-    "image": "product-pineapple.webp"
-  },
-  {
-    "id": "ayran",
-    "name": "لبن عيران",
-    "category": "drinks",
-    "price": 40,
-    "description": "لبن عيران إيتشيم.",
-    "turkish": "Ayran",
-    "image": "product-ayran.webp"
-  },
-  {
-    "id": "water",
-    "name": "ماء",
-    "category": "drinks",
-    "price": 20,
-    "description": "مياه شرب — زجاجة 500 مل.",
-    "turkish": "Su",
-    "image": "product-water.webp"
+    "id": "garlic",
+    "name": "صوص الثوم",
+    "category": "sauces",
+    "price": 30,
+    "description": "صوص الثوم — علبة 80 غرام.",
+    "turkish": "Sarımsaklı Mayonez",
+    "image": "product-garlic.webp",
+    "sourceIndex": 58
   },
   {
     "id": "pepsi",
@@ -453,7 +400,8 @@ const menuItems=[
     "price": 70,
     "turkish": "Pepsi Kola",
     "description": "مشروب بيبسي كولا.",
-    "image": "product-pepsi.webp"
+    "image": "product-pepsi.webp",
+    "sourceIndex": 42
   },
   {
     "id": "iced-tea",
@@ -462,7 +410,28 @@ const menuItems=[
     "price": 50,
     "turkish": "Soğuk Çay",
     "description": "شاي ديدي البارد بنكهة الخوخ.",
-    "image": "product-iced-tea.webp"
+    "image": "product-iced-tea.webp",
+    "sourceIndex": 43
+  },
+  {
+    "id": "cola",
+    "name": "كولا بروكس",
+    "category": "drinks",
+    "price": 50,
+    "description": "كولا بروكس — علبة 330 مل.",
+    "turkish": "Kola",
+    "image": "product-cola.webp",
+    "sourceIndex": 44
+  },
+  {
+    "id": "ayran",
+    "name": "لبن عيران",
+    "category": "drinks",
+    "price": 40,
+    "description": "لبن عيران إيتشيم.",
+    "turkish": "Ayran",
+    "image": "product-ayran.webp",
+    "sourceIndex": 45
   },
   {
     "id": "cola-zero",
@@ -471,7 +440,28 @@ const menuItems=[
     "price": 50,
     "turkish": "Şekersiz Kola",
     "description": "كولا بروكس زيرو بدون سكر.",
-    "image": "product-cola-zero.webp"
+    "image": "product-cola-zero.webp",
+    "sourceIndex": 46
+  },
+  {
+    "id": "water",
+    "name": "ماء",
+    "category": "drinks",
+    "price": 20,
+    "description": "مياه شرب — زجاجة 500 مل.",
+    "turkish": "Su",
+    "image": "product-water.webp",
+    "sourceIndex": 47
+  },
+  {
+    "id": "juice",
+    "name": "عصير أناناس",
+    "category": "drinks",
+    "price": 40,
+    "description": "مشروب جوس بقطع الأناناس.",
+    "turkish": "Ananas Meyve Suyu",
+    "image": "product-pineapple.webp",
+    "sourceIndex": 48
   },
   {
     "id": "mango",
@@ -480,7 +470,28 @@ const menuItems=[
     "price": 40,
     "turkish": "Mango Meyve Suyu",
     "description": "مشروب جوس بقطع المانجو.",
-    "image": "product-mango.webp"
+    "image": "product-mango.webp",
+    "sourceIndex": 49
+  },
+  {
+    "id": "gazoz",
+    "name": "بروكس ليمون",
+    "category": "drinks",
+    "price": 50,
+    "description": "مشروب بروكس الغازي بنكهة الليمون — 250 مل.",
+    "turkish": "Limon Aromalı Gazoz",
+    "image": "product-gazoz.webp",
+    "sourceIndex": 50
+  },
+  {
+    "id": "fanta",
+    "name": "بروكس برتقال",
+    "category": "drinks",
+    "price": 50,
+    "description": "مشروب بروكس الغازي بنكهة البرتقال — 250 مل.",
+    "turkish": "Portakal Aromalı Gazoz",
+    "image": "product-fanta.webp",
+    "sourceIndex": 51
   },
   {
     "id": "orange",
@@ -489,7 +500,8 @@ const menuItems=[
     "price": 40,
     "turkish": "Portakal Meyve Suyu",
     "description": "مشروب جوس بقطع البرتقال.",
-    "image": "product-orange.webp"
+    "image": "product-orange.webp",
+    "sourceIndex": 52
   },
   {
     "id": "peach",
@@ -498,6 +510,7 @@ const menuItems=[
     "price": 40,
     "turkish": "Şeftali Meyve Suyu",
     "description": "مشروب جوس بقطع الخوخ.",
-    "image": "product-peach.webp"
+    "image": "product-peach.webp",
+    "sourceIndex": 53
   }
 ];

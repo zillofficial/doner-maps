@@ -250,3 +250,5 @@ body>footer{margin-bottom:0;padding-bottom:max(32px,env(safe-area-inset-bottom))
 #site-intro.intro-done{opacity:0}
 @media(max-width:600px){#site-intro{bottom:18px;left:12px;width:200px;padding:12px}}
 @media(prefers-reduced-motion:reduce){#site-intro{display:none}.focus-word{opacity:1;transition:none}.focus-frame{transition:none}}
+
+@media(min-width:600px){#site-intro .intro-fire{height:122px}#site-intro .intro-fire canvas{height:122px;flex:0 0 480px;width:480px}}

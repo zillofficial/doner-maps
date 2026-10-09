@@ -1,0 +1,15 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const CleanCSS=require('clean-css');
+const root=(fs.existsSync(path.resolve(__dirname,'../dist/index.html'))?path.resolve(__dirname,'../dist'):path.resolve(__dirname,'..'));let html=fs.readFileSync(path.resolve(__dirname,'../src/index.html'),'utf8');
+const imageManifest=JSON.parse(fs.readFileSync(path.join(root,'images.js'),'utf8').replace(/^const imageAssets=/,'').replace(/;\s*$/,''));
+html=html.replace(/assets\/cheese-pull-(480|768|1066)-[a-f0-9]+\.webp/g,(old,w)=>imageManifest.hero.variants.find(v=>v.w===Number(w)).src);
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex').slice(0,10);
+const sourceStyles=[...html.matchAll(/<link rel="stylesheet" href="([^"?]+)(?:\?[^\"]*)?">/g)].map(m=>m[1]);
+const introStyle=html.match(/<style>([\s\S]*?)<\/style>/)[1];html=html.replace(/<style>[\s\S]*?<\/style>/,'');
+const css=fs.readFileSync(path.join(root,'fonts.css'),'utf8')+'\n'+sourceStyles.filter(n=>n!=='hold.css'&&n!=='responsive.css').map(n=>fs.readFileSync(path.join(root,n),'utf8')).join('\n')+'\n'+introStyle+'\n'+fs.readFileSync(path.join(root,'responsive.css'),'utf8');
+const min=new CleanCSS({level:1,rebase:false}).minify(css.replace(/assets\/brand-menu-source-\d+-[a-f0-9]+\.webp/g,imageManifest.brand));if(min.errors.length)throw Error(min.errors.join('\n'));
+html=html.replace(/<link rel="stylesheet" href="[^\"]+">/g,'');
+const hold=fs.readFileSync(path.join(root,'hold.css'));const holdName='hold.'+hash(hold)+'.css';fs.writeFileSync(path.join(root,holdName),hold);
+html=html.replace('</head>',`<style id="critical-site-css">${min.styles}</style><link rel="stylesheet" href="${holdName}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${holdName}"></noscript></head>`);
+html=html.replace(/<script src="([^"?]+)(?:\?[^\"]*)?" defer><\/script>/g,(_,name)=>{const data=fs.readFileSync(path.join(root,name));const filename=name.replace('.js','.'+hash(data)+'.js');fs.writeFileSync(path.join(root,filename),data);return `<script src="${filename}" defer></script>`;});
+fs.writeFileSync(path.join(root,'index.html'),html);console.log('Built inline first-paint CSS:',Buffer.byteLength(min.styles),'bytes; deferred hold CSS:',hold.length,'bytes');

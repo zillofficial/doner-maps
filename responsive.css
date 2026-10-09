@@ -249,7 +249,7 @@ body>footer{margin-bottom:0;padding-bottom:max(32px,env(safe-area-inset-bottom))
 #site-intro .intro-fire{position:absolute;inset:auto 0 0;height:min(28svh,220px);width:100%;direction:ltr}
 #site-intro .intro-fire.intro-tiled{height:122px}
 #site-intro.intro-done{opacity:0;visibility:hidden}
-@keyframes intro-exit{0%,65%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+@keyframes intro-exit{0%,65%{opacity:1}100%{opacity:0}}
 header .brand-wordmark,#site-intro .intro-logo{background-image:url('WORDMARK_ASSET');background-size:contain;background-position:center;background-repeat:no-repeat}
 .favorite-image picture,.product-photo picture{display:contents}
 @media(prefers-reduced-motion:reduce){#site-intro{display:none}.focus-word{opacity:1;transition:none}.focus-frame{transition:none}}
